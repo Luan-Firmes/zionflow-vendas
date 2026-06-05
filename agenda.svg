@@ -1,169 +1,169 @@
 <svg width="900" height="540" xmlns="http://www.w3.org/2000/svg" style="font-family:'Inter',system-ui,sans-serif;">
   <!-- Background -->
-  <rect width="900" height="540" fill="#0b0d14"/>
+  <rect width="900" height="540" fill="#ffffff"/>
 
   <!-- Header bar -->
-  <rect width="900" height="56" fill="#0f1120"/>
-  <text x="24" y="34" font-size="15" font-weight="700" fill="#e8ecf4">📅 Agenda</text>
+  <rect width="900" height="56" fill="#f8f9fc"/>
+  <text x="24" y="34" font-size="15" font-weight="700" fill="#1a1f35">📅 Agenda</text>
   <text x="140" y="34" font-size="13" fill="#6b7a95">Junho 2026</text>
   <!-- nav arrows -->
   <text x="240" y="34" font-size="13" fill="#7c6bef">‹</text>
   <text x="258" y="34" font-size="13" fill="#7c6bef">›</text>
   <!-- Today button -->
   <rect x="780" y="14" width="96" height="28" rx="8" fill="#7c6bef" opacity="0.15" stroke="#7c6bef" stroke-width="1"/>
-  <text x="828" y="32" font-size="12" fill="#a695ff" text-anchor="middle" font-weight="600">+ Novo</text>
+  <text x="828" y="32" font-size="12" fill="#6b50e0" text-anchor="middle" font-weight="600">+ Novo</text>
 
   <!-- Day headers -->
-  <rect y="56" width="900" height="44" fill="#0e1018"/>
+  <rect y="56" width="900" height="44" fill="#f1f3f8"/>
   <!-- Time col header -->
-  <rect y="56" width="64" height="44" fill="#0e1018"/>
-  <line x1="64" y1="56" x2="64" y2="540" stroke="#1a1f35" stroke-width="1"/>
+  <rect y="56" width="64" height="44" fill="#f1f3f8"/>
+  <line x1="64" y1="56" x2="64" y2="540" stroke="#e2e6f0" stroke-width="1"/>
 
   <!-- Day columns -->
   <!-- SEG 02 -->
-  <rect x="64" y="56" width="167" height="44" fill="#0e1018"/>
+  <rect x="64" y="56" width="167" height="44" fill="#f1f3f8"/>
   <text x="147" y="74" font-size="11" fill="#6b7a95" text-anchor="middle" font-weight="500">SEG</text>
-  <text x="147" y="90" font-size="16" fill="#e8ecf4" text-anchor="middle" font-weight="700">02</text>
-  <line x1="231" y1="56" x2="231" y2="540" stroke="#1a1f35" stroke-width="1"/>
+  <text x="147" y="90" font-size="16" fill="#1a1f35" text-anchor="middle" font-weight="700">02</text>
+  <line x1="231" y1="56" x2="231" y2="540" stroke="#e2e6f0" stroke-width="1"/>
 
   <!-- TER 03 -->
-  <rect x="231" y="56" width="167" height="44" fill="#0e1018"/>
+  <rect x="231" y="56" width="167" height="44" fill="#f1f3f8"/>
   <text x="314" y="74" font-size="11" fill="#6b7a95" text-anchor="middle" font-weight="500">TER</text>
-  <text x="314" y="90" font-size="16" fill="#e8ecf4" text-anchor="middle" font-weight="700">03</text>
-  <line x1="398" y1="56" x2="398" y2="540" stroke="#1a1f35" stroke-width="1"/>
+  <text x="314" y="90" font-size="16" fill="#1a1f35" text-anchor="middle" font-weight="700">03</text>
+  <line x1="398" y1="56" x2="398" y2="540" stroke="#e2e6f0" stroke-width="1"/>
 
   <!-- QUA 04 — today highlight -->
-  <rect x="398" y="56" width="167" height="44" fill="#0f1120"/>
-  <text x="481" y="74" font-size="11" fill="#a695ff" text-anchor="middle" font-weight="600">QUA</text>
+  <rect x="398" y="56" width="167" height="44" fill="#eeebff"/>
+  <text x="481" y="74" font-size="11" fill="#6b50e0" text-anchor="middle" font-weight="600">QUA</text>
   <circle cx="481" cy="83" r="14" fill="#7c6bef" opacity="0.9"/>
   <text x="481" y="88" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="700">04</text>
-  <line x1="565" y1="56" x2="565" y2="540" stroke="#1a1f35" stroke-width="1"/>
+  <line x1="565" y1="56" x2="565" y2="540" stroke="#e2e6f0" stroke-width="1"/>
 
   <!-- QUI 05 -->
-  <rect x="565" y="56" width="167" height="44" fill="#0e1018"/>
+  <rect x="565" y="56" width="167" height="44" fill="#f1f3f8"/>
   <text x="648" y="74" font-size="11" fill="#6b7a95" text-anchor="middle" font-weight="500">QUI</text>
-  <text x="648" y="90" font-size="16" fill="#e8ecf4" text-anchor="middle" font-weight="700">05</text>
-  <line x1="732" y1="56" x2="732" y2="540" stroke="#1a1f35" stroke-width="1"/>
+  <text x="648" y="90" font-size="16" fill="#1a1f35" text-anchor="middle" font-weight="700">05</text>
+  <line x1="732" y1="56" x2="732" y2="540" stroke="#e2e6f0" stroke-width="1"/>
 
   <!-- SEX 06 -->
-  <rect x="732" y="56" width="168" height="44" fill="#0e1018"/>
+  <rect x="732" y="56" width="168" height="44" fill="#f1f3f8"/>
   <text x="816" y="74" font-size="11" fill="#6b7a95" text-anchor="middle" font-weight="500">SEX</text>
-  <text x="816" y="90" font-size="16" fill="#e8ecf4" text-anchor="middle" font-weight="700">06</text>
+  <text x="816" y="90" font-size="16" fill="#1a1f35" text-anchor="middle" font-weight="700">06</text>
 
   <!-- Time grid -->
   <!-- 08h -->
-  <line x1="0" y1="100" x2="900" y2="100" stroke="#1a1f35" stroke-width="1"/>
+  <line x1="0" y1="100" x2="900" y2="100" stroke="#e2e6f0" stroke-width="1"/>
   <text x="32" y="114" font-size="10" fill="#6b7a95" text-anchor="middle">08:00</text>
   <!-- 09h -->
-  <line x1="0" y1="148" x2="900" y2="148" stroke="#1a1f35" stroke-width="1"/>
+  <line x1="0" y1="148" x2="900" y2="148" stroke="#e2e6f0" stroke-width="1"/>
   <text x="32" y="162" font-size="10" fill="#6b7a95" text-anchor="middle">09:00</text>
   <!-- 10h -->
-  <line x1="0" y1="196" x2="900" y2="196" stroke="#1a1f35" stroke-width="1"/>
+  <line x1="0" y1="196" x2="900" y2="196" stroke="#e2e6f0" stroke-width="1"/>
   <text x="32" y="210" font-size="10" fill="#6b7a95" text-anchor="middle">10:00</text>
   <!-- 11h -->
-  <line x1="0" y1="244" x2="900" y2="244" stroke="#1a1f35" stroke-width="1"/>
+  <line x1="0" y1="244" x2="900" y2="244" stroke="#e2e6f0" stroke-width="1"/>
   <text x="32" y="258" font-size="10" fill="#6b7a95" text-anchor="middle">11:00</text>
   <!-- 12h -->
-  <line x1="0" y1="292" x2="900" y2="292" stroke="#1a1f35" stroke-width="1"/>
+  <line x1="0" y1="292" x2="900" y2="292" stroke="#e2e6f0" stroke-width="1"/>
   <text x="32" y="306" font-size="10" fill="#6b7a95" text-anchor="middle">12:00</text>
   <!-- 13h -->
-  <line x1="0" y1="340" x2="900" y2="340" stroke="#1a1f35" stroke-width="1"/>
+  <line x1="0" y1="340" x2="900" y2="340" stroke="#e2e6f0" stroke-width="1"/>
   <text x="32" y="354" font-size="10" fill="#6b7a95" text-anchor="middle">13:00</text>
   <!-- 14h -->
-  <line x1="0" y1="388" x2="900" y2="388" stroke="#1a1f35" stroke-width="1"/>
+  <line x1="0" y1="388" x2="900" y2="388" stroke="#e2e6f0" stroke-width="1"/>
   <text x="32" y="402" font-size="10" fill="#6b7a95" text-anchor="middle">14:00</text>
   <!-- 15h -->
-  <line x1="0" y1="436" x2="900" y2="436" stroke="#1a1f35" stroke-width="1"/>
+  <line x1="0" y1="436" x2="900" y2="436" stroke="#e2e6f0" stroke-width="1"/>
   <text x="32" y="450" font-size="10" fill="#6b7a95" text-anchor="middle">15:00</text>
   <!-- 16h -->
-  <line x1="0" y1="484" x2="900" y2="484" stroke="#1a1f35" stroke-width="1"/>
+  <line x1="0" y1="484" x2="900" y2="484" stroke="#e2e6f0" stroke-width="1"/>
   <text x="32" y="498" font-size="10" fill="#6b7a95" text-anchor="middle">16:00</text>
 
   <!-- APPOINTMENTS -->
 
   <!-- SEG: 09:00 Consulta Inicial - Ana Paula -->
-  <rect x="68" y="152" width="159" height="80" rx="6" fill="#1a1f3a" stroke="#7c6bef" stroke-width="1.5"/>
+  <rect x="68" y="152" width="159" height="80" rx="6" fill="#f0eeff" stroke="#7c6bef" stroke-width="1.5"/>
   <rect x="68" y="152" width="4" height="80" rx="2" fill="#7c6bef"/>
-  <text x="80" y="168" font-size="10" fill="#a695ff" font-weight="600">09:00 – 10:00</text>
-  <text x="80" y="184" font-size="12" fill="#e8ecf4" font-weight="700">Consulta Inicial</text>
+  <text x="80" y="168" font-size="10" fill="#6b50e0" font-weight="600">09:00 – 10:00</text>
+  <text x="80" y="184" font-size="12" fill="#1a1f35" font-weight="700">Consulta Inicial</text>
   <text x="80" y="200" font-size="11" fill="#6b7a95">Ana Paula M.</text>
   <rect x="80" y="210" width="70" height="14" rx="4" fill="#7c6bef" opacity="0.2"/>
-  <text x="115" y="221" font-size="9" fill="#a695ff" text-anchor="middle" font-weight="600">✓ Confirmado</text>
+  <text x="115" y="221" font-size="9" fill="#6b50e0" text-anchor="middle" font-weight="600">✓ Confirmado</text>
 
   <!-- SEG: 14:00 Retorno - Carlos -->
-  <rect x="68" y="392" width="159" height="68" rx="6" fill="#1a2a1a" stroke="#22c55e" stroke-width="1.5"/>
+  <rect x="68" y="392" width="159" height="68" rx="6" fill="#efffef" stroke="#22c55e" stroke-width="1.5"/>
   <rect x="68" y="392" width="4" height="68" rx="2" fill="#22c55e"/>
-  <text x="80" y="408" font-size="10" fill="#86efac" font-weight="600">14:00 – 14:45</text>
-  <text x="80" y="424" font-size="12" fill="#e8ecf4" font-weight="700">Retorno</text>
+  <text x="80" y="408" font-size="10" fill="#15803d" font-weight="600">14:00 – 14:45</text>
+  <text x="80" y="424" font-size="12" fill="#1a1f35" font-weight="700">Retorno</text>
   <text x="80" y="440" font-size="11" fill="#6b7a95">Carlos Mendes</text>
   <rect x="80" y="448" width="60" height="14" rx="4" fill="#22c55e" opacity="0.15"/>
-  <text x="110" y="459" font-size="9" fill="#86efac" text-anchor="middle" font-weight="600">💬 WhatsApp</text>
+  <text x="110" y="459" font-size="9" fill="#15803d" text-anchor="middle" font-weight="600">💬 WhatsApp</text>
 
   <!-- TER: 10:30 Avaliação - Beatriz -->
-  <rect x="235" y="220" width="159" height="68" rx="6" fill="#1a2430" stroke="#3b82f6" stroke-width="1.5"/>
+  <rect x="235" y="220" width="159" height="68" rx="6" fill="#eef4ff" stroke="#3b82f6" stroke-width="1.5"/>
   <rect x="235" y="220" width="4" height="68" rx="2" fill="#3b82f6"/>
-  <text x="247" y="236" font-size="10" fill="#93c5fd" font-weight="600">10:30 – 11:15</text>
-  <text x="247" y="252" font-size="12" fill="#e8ecf4" font-weight="700">Avaliação</text>
+  <text x="247" y="236" font-size="10" fill="#1d4ed8" font-weight="600">10:30 – 11:15</text>
+  <text x="247" y="252" font-size="12" fill="#1a1f35" font-weight="700">Avaliação</text>
   <text x="247" y="268" font-size="11" fill="#6b7a95">Beatriz Santos</text>
   <rect x="247" y="276" width="66" height="14" rx="4" fill="#3b82f6" opacity="0.15"/>
-  <text x="280" y="287" font-size="9" fill="#93c5fd" text-anchor="middle" font-weight="600">⏳ Pendente</text>
+  <text x="280" y="287" font-size="9" fill="#1d4ed8" text-anchor="middle" font-weight="600">⏳ Pendente</text>
 
   <!-- TER: 15:30 Procedimento -->
-  <rect x="235" y="460" width="159" height="60" rx="6" fill="#1a1f3a" stroke="#7c6bef" stroke-width="1.5"/>
+  <rect x="235" y="460" width="159" height="60" rx="6" fill="#f0eeff" stroke="#7c6bef" stroke-width="1.5"/>
   <rect x="235" y="460" width="4" height="60" rx="2" fill="#7c6bef"/>
-  <text x="247" y="476" font-size="10" fill="#a695ff" font-weight="600">15:30 – 16:30</text>
-  <text x="247" y="492" font-size="12" fill="#e8ecf4" font-weight="700">Procedimento</text>
+  <text x="247" y="476" font-size="10" fill="#6b50e0" font-weight="600">15:30 – 16:30</text>
+  <text x="247" y="492" font-size="12" fill="#1a1f35" font-weight="700">Procedimento</text>
   <text x="247" y="508" font-size="11" fill="#6b7a95">Fernanda Lima</text>
 
   <!-- QUA: 09:00 Consulta - João (today) -->
-  <rect x="402" y="152" width="159" height="80" rx="6" fill="#1a1f3a" stroke="#7c6bef" stroke-width="2"/>
-  <rect x="402" y="152" width="4" height="80" rx="2" fill="#a695ff"/>
-  <text x="414" y="168" font-size="10" fill="#c4b8ff" font-weight="600">09:00 – 10:00</text>
-  <text x="414" y="184" font-size="12" fill="#ffffff" font-weight="700">Consulta · Dr. Ramos</text>
-  <text x="414" y="200" font-size="11" fill="#a695ff">João Rodrigues</text>
-  <rect x="414" y="210" width="70" height="14" rx="4" fill="#7c6bef" opacity="0.35"/>
-  <text x="449" y="221" font-size="9" fill="#c4b8ff" text-anchor="middle" font-weight="600">✓ Confirmado</text>
+  <rect x="402" y="152" width="159" height="80" rx="6" fill="#ede9ff" stroke="#7c6bef" stroke-width="2"/>
+  <rect x="402" y="152" width="4" height="80" rx="2" fill="#7c6bef"/>
+  <text x="414" y="168" font-size="10" fill="#5b41d9" font-weight="600">09:00 – 10:00</text>
+  <text x="414" y="184" font-size="12" fill="#1a1f35" font-weight="700">Consulta · Dr. Ramos</text>
+  <text x="414" y="200" font-size="11" fill="#6b50e0">João Rodrigues</text>
+  <rect x="414" y="210" width="70" height="14" rx="4" fill="#7c6bef" opacity="0.25"/>
+  <text x="449" y="221" font-size="9" fill="#5b41d9" text-anchor="middle" font-weight="600">✓ Confirmado</text>
 
   <!-- QUA: 13:00 Follow-up -->
-  <rect x="402" y="344" width="159" height="60" rx="6" fill="#1a2a1a" stroke="#22c55e" stroke-width="1.5"/>
+  <rect x="402" y="344" width="159" height="60" rx="6" fill="#efffef" stroke="#22c55e" stroke-width="1.5"/>
   <rect x="402" y="344" width="4" height="60" rx="2" fill="#22c55e"/>
-  <text x="414" y="360" font-size="10" fill="#86efac" font-weight="600">13:00 – 13:30</text>
-  <text x="414" y="376" font-size="12" fill="#e8ecf4" font-weight="700">Follow-up</text>
+  <text x="414" y="360" font-size="10" fill="#15803d" font-weight="600">13:00 – 13:30</text>
+  <text x="414" y="376" font-size="12" fill="#1a1f35" font-weight="700">Follow-up</text>
   <text x="414" y="392" font-size="11" fill="#6b7a95">Maria Lucia P.</text>
 
   <!-- QUI: 11:00 Avaliação - Pedro -->
-  <rect x="569" y="248" width="159" height="68" rx="6" fill="#2a1a1a" stroke="#f97316" stroke-width="1.5"/>
+  <rect x="569" y="248" width="159" height="68" rx="6" fill="#fff3ee" stroke="#f97316" stroke-width="1.5"/>
   <rect x="569" y="248" width="4" height="68" rx="2" fill="#f97316"/>
-  <text x="581" y="264" font-size="10" fill="#fdba74" font-weight="600">11:00 – 11:45</text>
-  <text x="581" y="280" font-size="12" fill="#e8ecf4" font-weight="700">Avaliação</text>
+  <text x="581" y="264" font-size="10" fill="#c2410c" font-weight="600">11:00 – 11:45</text>
+  <text x="581" y="280" font-size="12" fill="#1a1f35" font-weight="700">Avaliação</text>
   <text x="581" y="296" font-size="11" fill="#6b7a95">Pedro Almeida</text>
   <rect x="581" y="304" width="74" height="14" rx="4" fill="#f97316" opacity="0.15"/>
-  <text x="618" y="315" font-size="9" fill="#fdba74" text-anchor="middle" font-weight="600">🔔 Lembrete</text>
+  <text x="618" y="315" font-size="9" fill="#c2410c" text-anchor="middle" font-weight="600">🔔 Lembrete</text>
 
   <!-- QUI: 16:00 Consulta - Roberto -->
-  <rect x="569" y="488" width="159" height="44" rx="6" fill="#1a1f3a" stroke="#7c6bef" stroke-width="1.5"/>
+  <rect x="569" y="488" width="159" height="44" rx="6" fill="#f0eeff" stroke="#7c6bef" stroke-width="1.5"/>
   <rect x="569" y="488" width="4" height="44" rx="2" fill="#7c6bef"/>
-  <text x="581" y="504" font-size="10" fill="#a695ff" font-weight="600">16:00 – 17:00</text>
-  <text x="581" y="520" font-size="12" fill="#e8ecf4" font-weight="700">Consulta · Dra. Silva</text>
+  <text x="581" y="504" font-size="10" fill="#6b50e0" font-weight="600">16:00 – 17:00</text>
+  <text x="581" y="520" font-size="12" fill="#1a1f35" font-weight="700">Consulta · Dra. Silva</text>
 
   <!-- SEX: 09:30 Avaliação - Lucia -->
-  <rect x="736" y="176" width="160" height="68" rx="6" fill="#1a2430" stroke="#3b82f6" stroke-width="1.5"/>
+  <rect x="736" y="176" width="160" height="68" rx="6" fill="#eef4ff" stroke="#3b82f6" stroke-width="1.5"/>
   <rect x="736" y="176" width="4" height="68" rx="2" fill="#3b82f6"/>
-  <text x="748" y="192" font-size="10" fill="#93c5fd" font-weight="600">09:30 – 10:15</text>
-  <text x="748" y="208" font-size="12" fill="#e8ecf4" font-weight="700">Avaliação</text>
+  <text x="748" y="192" font-size="10" fill="#1d4ed8" font-weight="600">09:30 – 10:15</text>
+  <text x="748" y="208" font-size="12" fill="#1a1f35" font-weight="700">Avaliação</text>
   <text x="748" y="224" font-size="11" fill="#6b7a95">Lucia Ferreira</text>
   <rect x="748" y="232" width="70" height="14" rx="4" fill="#3b82f6" opacity="0.15"/>
-  <text x="783" y="243" font-size="9" fill="#93c5fd" text-anchor="middle" font-weight="600">✓ Confirmado</text>
+  <text x="783" y="243" font-size="9" fill="#1d4ed8" text-anchor="middle" font-weight="600">✓ Confirmado</text>
 
   <!-- SEX: 14:30 Retorno - Marcos -->
-  <rect x="736" y="416" width="160" height="60" rx="6" fill="#1a2a1a" stroke="#22c55e" stroke-width="1.5"/>
+  <rect x="736" y="416" width="160" height="60" rx="6" fill="#efffef" stroke="#22c55e" stroke-width="1.5"/>
   <rect x="736" y="416" width="4" height="60" rx="2" fill="#22c55e"/>
-  <text x="748" y="432" font-size="10" fill="#86efac" font-weight="600">14:30 – 15:00</text>
-  <text x="748" y="448" font-size="12" fill="#e8ecf4" font-weight="700">Retorno</text>
+  <text x="748" y="432" font-size="10" fill="#15803d" font-weight="600">14:30 – 15:00</text>
+  <text x="748" y="448" font-size="12" fill="#1a1f35" font-weight="700">Retorno</text>
   <text x="748" y="464" font-size="11" fill="#6b7a95">Marcos Souza</text>
 
   <!-- Bottom status bar -->
-  <rect y="520" width="900" height="20" fill="#0e1018"/>
+  <rect y="520" width="900" height="20" fill="#f1f3f8"/>
   <circle cx="20" cy="530" r="5" fill="#22c55e"/>
   <text x="32" y="534" font-size="10" fill="#6b7a95">Sincronizado com Google Calendar</text>
   <text x="750" y="534" font-size="10" fill="#6b7a95">9 consultas esta semana</text>
