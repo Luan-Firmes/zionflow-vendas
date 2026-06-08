@@ -477,6 +477,12 @@
     /* ── PLANO TIPO TAG ── */
     .plano-tipo { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,.05); border: 1px solid var(--border); border-radius: 6px; padding: 4px 10px; font-size: 10.5px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 12px; }
 
+    /* ── AVISO DUAS OPÇÕES ── */
+    @media(max-width:640px){
+      .opcoes-grid { grid-template-columns: 1fr !important; }
+      .opcoes-grid > div:first-child { border-right: none !important; border-bottom: 1px solid var(--border2); }
+    }
+
     /* ── PLANO PERSONALIZADO ── */
     .plano-custom-wrap { margin-top: 20px; }
     .plano-custom { background: linear-gradient(135deg,#0f1030,#130e28,#0c0e1c); border: 1px solid var(--p); border-radius: 22px; padding: 40px 44px; display: grid; grid-template-columns: 200px 1fr auto; gap: 52px; align-items: center; position: relative; overflow: hidden; box-shadow: 0 0 70px rgba(124,107,239,.18); }
@@ -1113,6 +1119,29 @@
       <div class="urgency-bar fade-up">
         <div class="urgency-dot"></div>
         <div class="urgency-text">🔥 <span>Preço de lançamento ativo.</span> Garante o seu plano antes do próximo reajuste — vagas de onboarding limitadas.</div>
+      </div>
+
+      <!-- Aviso — duas formas de contratar -->
+      <div class="fade-up" style="max-width:860px;margin:0 auto 48px;background:var(--card2);border:1px solid var(--border2);border-radius:20px;overflow:hidden;">
+        <div style="background:rgba(124,107,239,.1);padding:14px 28px;text-align:center;border-bottom:1px solid var(--border2);">
+          <span style="font-size:12px;font-weight:800;color:var(--p2);text-transform:uppercase;letter-spacing:.1em;">Antes de escolher seu plano — leia isso</span>
+        </div>
+        <div class="opcoes-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:0;">
+          <!-- Opção 1 -->
+          <div style="padding:28px 32px;border-right:1px solid var(--border2);">
+            <div style="font-size:28px;margin-bottom:12px;">🛠️</div>
+            <div style="font-size:15px;font-weight:800;color:var(--white);margin-bottom:8px;">Você mesmo configura</div>
+            <div style="font-size:13px;color:var(--muted);line-height:1.75;">Contrate o plano e faça todas as configurações e integrações no seu ritmo — com acesso ao <strong style="color:var(--text);">portal de tutoriais e aulas exclusivas</strong> que ensinam cada passo do sistema.</div>
+            <div style="margin-top:14px;display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--p2);background:rgba(124,107,239,.1);border:1px solid var(--border2);border-radius:8px;padding:6px 12px;">✓ Mais econômico · Portal incluso em todos os planos</div>
+          </div>
+          <!-- Opção 2 -->
+          <div style="padding:28px 32px;background:rgba(124,107,239,.04);">
+            <div style="font-size:28px;margin-bottom:12px;">⚙️</div>
+            <div style="font-size:15px;font-weight:800;color:var(--white);margin-bottom:8px;">Nossa equipe configura tudo</div>
+            <div style="font-size:13px;color:var(--muted);line-height:1.75;">Contrate a <strong style="color:var(--text);">implementação do seu plano</strong> e nossa equipe faz todas as configurações, conexões e integrações por você — de acordo com os recursos do plano escolhido.</div>
+            <div style="margin-top:14px;display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--p2);background:rgba(124,107,239,.1);border:1px solid var(--border2);border-radius:8px;padding:6px 12px;">✓ Sem precisar mexer em nada · R$ 1.199 único</div>
+          </div>
+        </div>
       </div>
 
       <div class="planos-grid">
