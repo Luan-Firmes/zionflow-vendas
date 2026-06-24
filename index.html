@@ -315,7 +315,7 @@
     /* ── PREÇOS ── */
     .precos-section { background: var(--bg2); }
     .planos-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; margin-top: 56px; }
-    @media (max-width:900px) { .planos-grid { grid-template-columns: 1fr; max-width: 420px; margin-left: auto; margin-right: auto; } }
+    @media (max-width:900px) { .planos-grid { grid-template-columns: 1fr; max-width: 520px; margin-left: auto; margin-right: auto; } }
     .plano-card {
       background: var(--card); border: 1px solid var(--border);
       border-radius: 22px; padding: 32px; position: relative;
@@ -357,6 +357,89 @@
     .plano-item.off { color: rgba(255,255,255,.25); }
     .plano-item.off::before { content: '×'; color: rgba(255,255,255,.15); }
     .plano-cta { width: 100%; justify-content: center; border-radius: 12px; padding: 14px; font-size: 14px; }
+
+    /* ── PLANO DUAL PRICE (tokens toggle) ── */
+    .plano-dual {
+      background: rgba(255,255,255,.04);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      margin-bottom: 20px;
+      overflow: hidden;
+    }
+    .plano-dual-header {
+      display: flex;
+      border-bottom: 1px solid var(--border);
+    }
+    .plano-dual-tab {
+      flex: 1;
+      padding: 10px 8px;
+      text-align: center;
+      cursor: pointer;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--muted);
+      transition: all .2s;
+      border: none;
+      background: transparent;
+    }
+    .plano-dual-tab.active {
+      background: rgba(124,107,239,.15);
+      color: var(--p2);
+    }
+    .plano-dual-tab:first-child {
+      border-right: 1px solid var(--border);
+    }
+    .plano-dual-body {
+      padding: 16px;
+    }
+    .plano-dual-option {
+      display: none;
+    }
+    .plano-dual-option.active {
+      display: block;
+    }
+    .dual-preco-row {
+      display: flex;
+      align-items: flex-end;
+      gap: 2px;
+      margin-bottom: 4px;
+    }
+    .dual-cifrao { font-size: 15px; font-weight: 700; color: var(--muted); margin-bottom: 6px; }
+    .dual-valor { font-size: 42px; font-weight: 900; color: var(--white); line-height: 1; letter-spacing: -.03em; }
+    .plano-card.popular .dual-valor {
+      background: linear-gradient(135deg, var(--p2) 0%, #c4b8ff 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .dual-periodo { font-size: 12px; color: var(--muted); margin-bottom: 4px; }
+    .dual-old-price { font-size: 12px; color: var(--muted); text-decoration: line-through; font-weight: 500; margin-bottom: 2px; }
+    .dual-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 10.5px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 8px;
+      margin-top: 6px;
+    }
+    .dual-badge-client {
+      background: rgba(107, 122, 149, 0.15);
+      border: 1px solid rgba(107, 122, 149, 0.25);
+      color: var(--muted);
+    }
+    .dual-badge-zion {
+      background: rgba(124,107,239,.15);
+      border: 1px solid var(--border2);
+      color: var(--p2);
+    }
+    .dual-tokens-info {
+      margin-top: 8px;
+      font-size: 11.5px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    .dual-tokens-info strong { color: var(--text); }
 
     /* ── FAQ ── */
     .faq-section { background: var(--bg); }
@@ -526,8 +609,6 @@
     .insta-msg.sent { background: linear-gradient(135deg,var(--p),#9b5de5); color: #fff; align-self: flex-end; border-bottom-right-radius: 4px; }
     .insta-msg.auto { background: rgba(228,64,95,.12); border: 1px solid rgba(228,64,95,.2); color: #f06292; align-self: flex-start; font-size: 11.5px; border-bottom-left-radius: 4px; }
     .insta-auto-tag { display: inline-flex; align-items: center; gap: 4px; font-size: 10px; font-weight: 700; letter-spacing:.06em; text-transform:uppercase; }
-
-    /* ── INTEGRAÇÕES grid extra ── */
 
     /* ── INTEGRAÇÕES MARQUEE ── */
     .integ-section { overflow: hidden; background: var(--bg2); }
@@ -1007,11 +1088,9 @@
       <p class="section-sub mx-auto fade-up d2" style="margin-top:14px;">Mais de 15 integrações nativas prontas para usar — sem precisar de programação.</p>
     </div>
 
-    <!-- Trilho 1 → esquerda -->
     <div class="integ-marquee-rows">
       <div class="marquee-row">
         <div class="marquee-track">
-          <!-- set 1 -->
           <div class="integ-pill"><img src="https://cdn.simpleicons.org/whatsapp/25D366" alt="WhatsApp"/><span>WhatsApp API Oficial</span></div>
           <div class="integ-pill"><img src="https://cdn.simpleicons.org/instagram/E4405F" alt="Instagram"/><span>Instagram Direct</span></div>
           <div class="integ-pill"><img src="https://cdn.simpleicons.org/facebook/1877F2" alt="Facebook"/><span>Facebook Messenger</span></div>
@@ -1023,7 +1102,6 @@
           <div class="integ-pill"><img src="https://cdn.simpleicons.org/tiktok/ffffff" alt="TikTok"/><span>TikTok</span></div>
           <div class="integ-pill"><img src="https://www.google.com/s2/favicons?sz=64&domain=mercadolivre.com.br" alt="Mercado Livre"/><span>Mercado Livre</span></div>
           <div class="integ-pill"><img src="https://www.google.com/s2/favicons?sz=64&domain=olx.com.br" alt="OLX"/><span>OLX</span></div>
-          <!-- set 2 (duplicado para loop) -->
           <div class="integ-pill"><img src="https://cdn.simpleicons.org/whatsapp/25D366" alt="WhatsApp"/><span>WhatsApp API Oficial</span></div>
           <div class="integ-pill"><img src="https://cdn.simpleicons.org/instagram/E4405F" alt="Instagram"/><span>Instagram Direct</span></div>
           <div class="integ-pill"><img src="https://cdn.simpleicons.org/facebook/1877F2" alt="Facebook"/><span>Facebook Messenger</span></div>
@@ -1038,10 +1116,8 @@
         </div>
       </div>
 
-      <!-- Trilho 2 → direita -->
       <div class="marquee-row">
         <div class="marquee-track rev">
-          <!-- set 1 -->
           <div class="integ-pill"><img src="https://www.google.com/s2/favicons?sz=64&domain=braip.com" alt="Braip"/><span>Braip</span></div>
           <div class="integ-pill"><img src="https://cdn.simpleicons.org/meta/0082FB" alt="Facebook Ads"/><span>Facebook Lead Ads</span></div>
           <div class="integ-pill"><img src="https://www.google.com/s2/favicons?sz=64&domain=logzz.com.br" alt="Logzz"/><span>Logzz</span></div>
@@ -1051,7 +1127,6 @@
           <div class="integ-pill"><img src="https://www.google.com/s2/favicons?sz=64&domain=openai.com" alt="OpenAI"/><span>OpenAI / Gemini</span></div>
           <div class="integ-pill"><img src="https://www.google.com/s2/favicons?sz=64&domain=webhook.site" alt="Webhooks"/><span>Webhooks</span></div>
           <div class="integ-pill"><img src="https://cdn.simpleicons.org/googlecalendar/4285F4" alt="Google Calendar"/><span>Google Calendar</span></div>
-          <!-- set 2 (duplicado para loop) -->
           <div class="integ-pill"><img src="https://www.google.com/s2/favicons?sz=64&domain=braip.com" alt="Braip"/><span>Braip</span></div>
           <div class="integ-pill"><img src="https://cdn.simpleicons.org/meta/0082FB" alt="Facebook Ads"/><span>Facebook Lead Ads</span></div>
           <div class="integ-pill"><img src="https://www.google.com/s2/favicons?sz=64&domain=logzz.com.br" alt="Logzz"/><span>Logzz</span></div>
@@ -1127,14 +1202,12 @@
           <span style="font-size:12px;font-weight:800;color:var(--p2);text-transform:uppercase;letter-spacing:.1em;">Antes de escolher seu plano — leia isso</span>
         </div>
         <div class="opcoes-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:0;">
-          <!-- Opção 1 -->
           <div style="padding:28px 32px;border-right:1px solid var(--border2);">
             <div style="font-size:28px;margin-bottom:12px;">🛠️</div>
             <div style="font-size:15px;font-weight:800;color:var(--white);margin-bottom:8px;">Você mesmo configura</div>
             <div style="font-size:13px;color:var(--muted);line-height:1.75;">Contrate o plano e faça todas as configurações e integrações no seu ritmo — com acesso ao <strong style="color:var(--text);">portal de tutoriais e aulas exclusivas</strong> que ensinam cada passo do sistema.</div>
             <div style="margin-top:14px;display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--p2);background:rgba(124,107,239,.1);border:1px solid var(--border2);border-radius:8px;padding:6px 12px;">✓ Mais econômico · Portal incluso em todos os planos</div>
           </div>
-          <!-- Opção 2 -->
           <div style="padding:28px 32px;background:rgba(124,107,239,.04);">
             <div style="font-size:28px;margin-bottom:12px;">⚙️</div>
             <div style="font-size:15px;font-weight:800;color:var(--white);margin-bottom:8px;">Nossa equipe configura tudo</div>
@@ -1145,6 +1218,8 @@
       </div>
 
       <div class="planos-grid">
+
+        <!-- STARTER -->
         <div class="plano-card fade-up d1">
           <div class="plano-name">Starter</div>
           <div class="plano-tipo">🛠️ Configure você mesmo</div>
@@ -1173,15 +1248,44 @@
           <a href="https://app.zionflow.com.br/register" target="_blank" class="btn btn-outline plano-cta">Começar agora</a>
         </div>
 
+        <!-- PRO -->
         <div class="plano-card popular fade-up d2">
           <div class="popular-tag">✦ Mais escolhido · 70% dos clientes</div>
           <div class="plano-name">Pro</div>
           <div class="plano-tipo">🛠️ Configure você mesmo</div>
-          <div class="plano-preco">
-            <span style="font-size:13px;color:rgba(255,255,255,.3);text-decoration:line-through;font-weight:500;margin-right:6px;margin-bottom:10px;align-self:flex-end;">R$897</span>
-            <span class="plano-cifrao">R$</span><span class="plano-valor">549</span><span style="font-size:18px;font-weight:700;color:rgba(255,255,255,.35);margin-bottom:10px;align-self:flex-end;">/mês</span>
+
+          <!-- DUAL PRICE TABS -->
+          <div class="plano-dual">
+            <div class="plano-dual-header">
+              <button class="plano-dual-tab active" onclick="switchTab(this,'pro-client','pro-zion')">🔑 Tokens próprios</button>
+              <button class="plano-dual-tab" onclick="switchTab(this,'pro-zion','pro-client')">♾️ 50M Tokens inclusos</button>
+            </div>
+            <div class="plano-dual-body">
+              <div class="plano-dual-option active" id="pro-client">
+                <div class="dual-old-price">R$897</div>
+                <div class="dual-preco-row">
+                  <span class="dual-cifrao">R$</span>
+                  <span class="dual-valor">549</span>
+                  <span style="font-size:15px;font-weight:700;color:rgba(255,255,255,.35);margin-bottom:5px;align-self:flex-end;">/mês</span>
+                </div>
+                <div class="dual-periodo">sem fidelidade · cancele quando quiser</div>
+                <div class="dual-badge dual-badge-client">🔑 Créditos/tokens de IA por conta do cliente</div>
+                <div class="dual-tokens-info">Você conecta sua própria chave de API (OpenAI, Gemini) e gerencia seus créditos de IA diretamente.</div>
+              </div>
+              <div class="plano-dual-option" id="pro-zion">
+                <div class="dual-old-price">R$897</div>
+                <div class="dual-preco-row">
+                  <span class="dual-cifrao">R$</span>
+                  <span class="dual-valor">799</span>
+                  <span style="font-size:15px;font-weight:700;color:rgba(255,255,255,.35);margin-bottom:5px;align-self:flex-end;">/mês</span>
+                </div>
+                <div class="dual-periodo">sem fidelidade · cancele quando quiser</div>
+                <div class="dual-badge dual-badge-zion">♾️ 50.000.000 tokens IA/mês — por nossa conta</div>
+                <div class="dual-tokens-info">Tokens fornecidos por nós. <strong>Sem precisar de chave de API</strong>, sem custo extra de tokens — use a IA do jeito mais simples.</div>
+              </div>
+            </div>
           </div>
-          <div class="plano-periodo">sem fidelidade · cancele quando quiser</div>
+
           <div class="plano-desc">Automatize, escale e venda mais em todos os canais — com IA trabalhando para você 24 horas por dia.</div>
           <ul class="plano-items">
             <li class="plano-item">6 conexões — WhatsApp Lite · Instagram · Facebook</li>
@@ -1201,14 +1305,43 @@
           <div style="text-align:center;margin-top:12px;font-size:12px;color:rgba(196,184,255,.6);">Economize ~R$800/mês vs ferramentas separadas</div>
         </div>
 
+        <!-- ENTERPRISE -->
         <div class="plano-card fade-up d3">
           <div class="plano-name">Enterprise</div>
           <div class="plano-tipo">🛠️ Configure você mesmo</div>
-          <div class="plano-preco">
-            <span style="font-size:13px;color:var(--muted);text-decoration:line-through;font-weight:500;margin-right:6px;margin-bottom:10px;align-self:flex-end;">R$1.497</span>
-            <span class="plano-cifrao">R$</span><span class="plano-valor">897</span><span style="font-size:18px;font-weight:700;color:var(--muted);margin-bottom:10px;align-self:flex-end;">/mês</span>
+
+          <!-- DUAL PRICE TABS -->
+          <div class="plano-dual">
+            <div class="plano-dual-header">
+              <button class="plano-dual-tab active" onclick="switchTab(this,'ent-client','ent-zion')">🔑 Tokens próprios</button>
+              <button class="plano-dual-tab" onclick="switchTab(this,'ent-zion','ent-client')">♾️ 50M Tokens inclusos</button>
+            </div>
+            <div class="plano-dual-body">
+              <div class="plano-dual-option active" id="ent-client">
+                <div class="dual-old-price">R$1.497</div>
+                <div class="dual-preco-row">
+                  <span class="dual-cifrao">R$</span>
+                  <span class="dual-valor">897</span>
+                  <span style="font-size:15px;font-weight:700;color:var(--muted);margin-bottom:5px;align-self:flex-end;">/mês</span>
+                </div>
+                <div class="dual-periodo">sem fidelidade · cancele quando quiser</div>
+                <div class="dual-badge dual-badge-client">🔑 Créditos/tokens de IA por conta do cliente</div>
+                <div class="dual-tokens-info">Você conecta sua própria chave de API (OpenAI, Gemini) e gerencia seus créditos de IA diretamente.</div>
+              </div>
+              <div class="plano-dual-option" id="ent-zion">
+                <div class="dual-old-price">R$1.497</div>
+                <div class="dual-preco-row">
+                  <span class="dual-cifrao">R$</span>
+                  <span class="dual-valor">1.099</span>
+                  <span style="font-size:15px;font-weight:700;color:var(--muted);margin-bottom:5px;align-self:flex-end;">/mês</span>
+                </div>
+                <div class="dual-periodo">sem fidelidade · cancele quando quiser</div>
+                <div class="dual-badge dual-badge-zion">♾️ 50.000.000 tokens IA/mês — por nossa conta</div>
+                <div class="dual-tokens-info">Tokens fornecidos por nós. <strong>Sem precisar de chave de API</strong>, sem custo extra de tokens — use a IA do jeito mais simples.</div>
+              </div>
+            </div>
           </div>
-          <div class="plano-periodo">sem fidelidade · cancele quando quiser</div>
+
           <div class="plano-desc">Escala máxima, conexões ilimitadas e suporte dedicado para empresas que não aceitam limites.</div>
           <ul class="plano-items">
             <li class="plano-item">✦ WhatsApp API Oficial disponível</li>
@@ -1224,6 +1357,7 @@
           </ul>
           <a href="https://app.zionflow.com.br/register" target="_blank" class="btn btn-primary plano-cta">Começar agora</a>
         </div>
+
       </div>
 
       <!-- Super condição anual — banner de destaque -->
@@ -1245,6 +1379,11 @@
         <div class="plano-custom">
           <div>
             <div class="custom-tag">⚙️ Implantação Completa</div>
+            <!-- ANCORAGEM DE VALOR -->
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;flex-wrap:wrap;">
+              <span style="font-size:16px;color:rgba(255,255,255,.3);text-decoration:line-through;font-weight:600;">De R$ 3.000</span>
+              <span style="font-size:11px;font-weight:800;color:#a695ff;background:rgba(124,107,239,.15);border:1px solid rgba(124,107,239,.3);padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:.06em;">por apenas</span>
+            </div>
             <div class="custom-preco">
               <span class="custom-cifrao">R$</span>
               <span class="custom-valor">1.199</span>
@@ -1324,6 +1463,19 @@
   </footer>
 
   <script>
+    // Dual price tab switcher
+    function switchTab(btn, showId, hideId) {
+      // toggle tab buttons
+      var tabs = btn.parentElement.querySelectorAll('.plano-dual-tab');
+      tabs.forEach(function(t){ t.classList.remove('active'); });
+      btn.classList.add('active');
+      // toggle content panels
+      var show = document.getElementById(showId);
+      var hide = document.getElementById(hideId);
+      if (show) { show.classList.add('active'); }
+      if (hide) { hide.classList.remove('active'); }
+    }
+
     // Scroll animations
     const obs = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
@@ -1345,7 +1497,7 @@
       document.querySelector('nav').style.background =
         window.scrollY > 40 ? 'rgba(8,9,14,.96)' : 'rgba(8,9,14,.82)';
     });
-
   </script>
 </body>
 </html>
+HTMLEOF
