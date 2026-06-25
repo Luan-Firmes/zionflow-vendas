@@ -441,6 +441,46 @@
     }
     .dual-tokens-info strong { color: var(--text); }
 
+    /* ── PERIOD TOGGLE (Mensal / Anual) ── */
+    .period-toggle {
+      display: flex; gap: 4px;
+      background: rgba(0,0,0,.25);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 4px;
+      margin-bottom: 14px;
+    }
+    .period-btn {
+      flex: 1; display: flex; align-items: center; justify-content: center; gap: 6px;
+      padding: 9px 8px; border: none; background: transparent; cursor: pointer;
+      font-size: 11.5px; font-weight: 700; color: var(--muted);
+      border-radius: 7px; transition: all .2s;
+    }
+    .period-btn:hover { color: var(--text); }
+    .period-btn.active {
+      background: linear-gradient(135deg, var(--p), #9b5de5);
+      color: #fff;
+      box-shadow: 0 4px 16px rgba(124,107,239,.4);
+    }
+    .period-save {
+      font-size: 9px; font-weight: 800; letter-spacing: .02em;
+      background: rgba(251,191,36,.18); color: #fbbf24;
+      padding: 2px 6px; border-radius: 100px;
+    }
+    .period-btn.active .period-save { background: rgba(255,255,255,.25); color: #fff; }
+
+    .price-period { display: none; }
+    .plano-dual:not(.annual) .price-monthly { display: block; }
+    .plano-dual.annual .price-annual { display: block; }
+
+    .dual-per-suffix { font-size: 15px; font-weight: 700; color: rgba(255,255,255,.35); margin-bottom: 5px; align-self: flex-end; }
+    .dual-equiv { font-size: 11.5px; color: var(--p2); font-weight: 600; margin-top: 2px; }
+    .dual-badge-save {
+      background: rgba(251,191,36,.12);
+      border: 1px solid rgba(251,191,36,.3);
+      color: #fbbf24;
+    }
+
     /* ── FAQ ── */
     .faq-section { background: var(--bg); }
     .faq-grid { max-width: 700px; margin: 48px auto 0; display: flex; flex-direction: column; gap: 10px; }
@@ -1233,32 +1273,64 @@
 
           <!-- DUAL PRICE TABS -->
           <div class="plano-dual">
+            <div class="period-toggle">
+              <button class="period-btn active" onclick="switchPeriod(this,'mensal')">📆 Mensal</button>
+              <button class="period-btn" onclick="switchPeriod(this,'anual')">🗓️ Anual <span class="period-save">-25%</span></button>
+            </div>
             <div class="plano-dual-header">
               <button class="plano-dual-tab active" onclick="switchTab(this,'pro-client','pro-zion')">🔑 Tokens próprios</button>
               <button class="plano-dual-tab" onclick="switchTab(this,'pro-zion','pro-client')">♾️ 50M Tokens inclusos</button>
             </div>
             <div class="plano-dual-body">
               <div class="plano-dual-option active" id="pro-client">
-                <div class="dual-old-price">R$897</div>
-                <div class="dual-preco-row">
-                  <span class="dual-cifrao">R$</span>
-                  <span class="dual-valor">549</span>
-                  <span style="font-size:15px;font-weight:700;color:rgba(255,255,255,.35);margin-bottom:5px;align-self:flex-end;">/mês</span>
+                <div class="price-period price-monthly">
+                  <div class="dual-old-price">R$897</div>
+                  <div class="dual-preco-row">
+                    <span class="dual-cifrao">R$</span>
+                    <span class="dual-valor">549</span>
+                    <span class="dual-per-suffix">/mês</span>
+                  </div>
+                  <div class="dual-periodo">sem fidelidade · cancele quando quiser</div>
+                  <div class="dual-badge dual-badge-client">🔑 Créditos/tokens de IA por conta do cliente</div>
+                  <div class="dual-tokens-info">Você conecta sua própria chave de API (OpenAI, Gemini) e gerencia seus créditos de IA diretamente.</div>
                 </div>
-                <div class="dual-periodo">sem fidelidade · cancele quando quiser</div>
-                <div class="dual-badge dual-badge-client">🔑 Créditos/tokens de IA por conta do cliente</div>
-                <div class="dual-tokens-info">Você conecta sua própria chave de API (OpenAI, Gemini) e gerencia seus créditos de IA diretamente.</div>
+                <div class="price-period price-annual">
+                  <div class="dual-old-price">R$6.588 cobrando mês a mês</div>
+                  <div class="dual-preco-row">
+                    <span class="dual-cifrao">R$</span>
+                    <span class="dual-valor">4.941</span>
+                    <span class="dual-per-suffix">/ano</span>
+                  </div>
+                  <div class="dual-periodo">pagamento único anual · sem fidelidade</div>
+                  <div class="dual-equiv">equivale a R$411,75/mês</div>
+                  <div class="dual-badge dual-badge-save">💰 Economize 25% + 1 mês grátis</div>
+                  <div class="dual-tokens-info">Você conecta sua própria chave de API (OpenAI, Gemini) e gerencia seus créditos de IA diretamente.</div>
+                </div>
               </div>
               <div class="plano-dual-option" id="pro-zion">
-                <div class="dual-old-price">R$897</div>
-                <div class="dual-preco-row">
-                  <span class="dual-cifrao">R$</span>
-                  <span class="dual-valor">799</span>
-                  <span style="font-size:15px;font-weight:700;color:rgba(255,255,255,.35);margin-bottom:5px;align-self:flex-end;">/mês</span>
+                <div class="price-period price-monthly">
+                  <div class="dual-old-price">R$897</div>
+                  <div class="dual-preco-row">
+                    <span class="dual-cifrao">R$</span>
+                    <span class="dual-valor">799</span>
+                    <span class="dual-per-suffix">/mês</span>
+                  </div>
+                  <div class="dual-periodo">sem fidelidade · cancele quando quiser</div>
+                  <div class="dual-badge dual-badge-zion">♾️ 50.000.000 tokens IA/mês — por nossa conta</div>
+                  <div class="dual-tokens-info">Tokens fornecidos por nós. <strong>Sem precisar de chave de API</strong>, sem custo extra de tokens — use a IA do jeito mais simples.</div>
                 </div>
-                <div class="dual-periodo">sem fidelidade · cancele quando quiser</div>
-                <div class="dual-badge dual-badge-zion">♾️ 50.000.000 tokens IA/mês — por nossa conta</div>
-                <div class="dual-tokens-info">Tokens fornecidos por nós. <strong>Sem precisar de chave de API</strong>, sem custo extra de tokens — use a IA do jeito mais simples.</div>
+                <div class="price-period price-annual">
+                  <div class="dual-old-price">R$9.588 cobrando mês a mês</div>
+                  <div class="dual-preco-row">
+                    <span class="dual-cifrao">R$</span>
+                    <span class="dual-valor">7.191</span>
+                    <span class="dual-per-suffix">/ano</span>
+                  </div>
+                  <div class="dual-periodo">pagamento único anual · sem fidelidade</div>
+                  <div class="dual-equiv">equivale a R$599,25/mês</div>
+                  <div class="dual-badge dual-badge-save">💰 Economize 25% + 1 mês grátis</div>
+                  <div class="dual-tokens-info">Tokens fornecidos por nós. <strong>Sem precisar de chave de API</strong>, sem custo extra de tokens — use a IA do jeito mais simples.</div>
+                </div>
               </div>
             </div>
           </div>
@@ -1288,32 +1360,64 @@
 
           <!-- DUAL PRICE TABS -->
           <div class="plano-dual">
+            <div class="period-toggle">
+              <button class="period-btn active" onclick="switchPeriod(this,'mensal')">📆 Mensal</button>
+              <button class="period-btn" onclick="switchPeriod(this,'anual')">🗓️ Anual <span class="period-save">-25%</span></button>
+            </div>
             <div class="plano-dual-header">
               <button class="plano-dual-tab active" onclick="switchTab(this,'ent-client','ent-zion')">🔑 Tokens próprios</button>
               <button class="plano-dual-tab" onclick="switchTab(this,'ent-zion','ent-client')">♾️ 50M Tokens inclusos</button>
             </div>
             <div class="plano-dual-body">
               <div class="plano-dual-option active" id="ent-client">
-                <div class="dual-old-price">R$1.497</div>
-                <div class="dual-preco-row">
-                  <span class="dual-cifrao">R$</span>
-                  <span class="dual-valor">897</span>
-                  <span style="font-size:15px;font-weight:700;color:var(--muted);margin-bottom:5px;align-self:flex-end;">/mês</span>
+                <div class="price-period price-monthly">
+                  <div class="dual-old-price">R$1.497</div>
+                  <div class="dual-preco-row">
+                    <span class="dual-cifrao">R$</span>
+                    <span class="dual-valor">897</span>
+                    <span class="dual-per-suffix" style="color:var(--muted);">/mês</span>
+                  </div>
+                  <div class="dual-periodo">sem fidelidade · cancele quando quiser</div>
+                  <div class="dual-badge dual-badge-client">🔑 Créditos/tokens de IA por conta do cliente</div>
+                  <div class="dual-tokens-info">Você conecta sua própria chave de API (OpenAI, Gemini) e gerencia seus créditos de IA diretamente.</div>
                 </div>
-                <div class="dual-periodo">sem fidelidade · cancele quando quiser</div>
-                <div class="dual-badge dual-badge-client">🔑 Créditos/tokens de IA por conta do cliente</div>
-                <div class="dual-tokens-info">Você conecta sua própria chave de API (OpenAI, Gemini) e gerencia seus créditos de IA diretamente.</div>
+                <div class="price-period price-annual">
+                  <div class="dual-old-price">R$10.764 cobrando mês a mês</div>
+                  <div class="dual-preco-row">
+                    <span class="dual-cifrao">R$</span>
+                    <span class="dual-valor">8.079</span>
+                    <span class="dual-per-suffix" style="color:var(--muted);">/ano</span>
+                  </div>
+                  <div class="dual-periodo">pagamento único anual · sem fidelidade</div>
+                  <div class="dual-equiv">equivale a R$673,25/mês</div>
+                  <div class="dual-badge dual-badge-save">💰 Economize 25% + 1 mês grátis</div>
+                  <div class="dual-tokens-info">Você conecta sua própria chave de API (OpenAI, Gemini) e gerencia seus créditos de IA diretamente.</div>
+                </div>
               </div>
               <div class="plano-dual-option" id="ent-zion">
-                <div class="dual-old-price">R$1.497</div>
-                <div class="dual-preco-row">
-                  <span class="dual-cifrao">R$</span>
-                  <span class="dual-valor">1.099</span>
-                  <span style="font-size:15px;font-weight:700;color:var(--muted);margin-bottom:5px;align-self:flex-end;">/mês</span>
+                <div class="price-period price-monthly">
+                  <div class="dual-old-price">R$1.497</div>
+                  <div class="dual-preco-row">
+                    <span class="dual-cifrao">R$</span>
+                    <span class="dual-valor">1.099</span>
+                    <span class="dual-per-suffix" style="color:var(--muted);">/mês</span>
+                  </div>
+                  <div class="dual-periodo">sem fidelidade · cancele quando quiser</div>
+                  <div class="dual-badge dual-badge-zion">♾️ 50.000.000 tokens IA/mês — por nossa conta</div>
+                  <div class="dual-tokens-info">Tokens fornecidos por nós. <strong>Sem precisar de chave de API</strong>, sem custo extra de tokens — use a IA do jeito mais simples.</div>
                 </div>
-                <div class="dual-periodo">sem fidelidade · cancele quando quiser</div>
-                <div class="dual-badge dual-badge-zion">♾️ 50.000.000 tokens IA/mês — por nossa conta</div>
-                <div class="dual-tokens-info">Tokens fornecidos por nós. <strong>Sem precisar de chave de API</strong>, sem custo extra de tokens — use a IA do jeito mais simples.</div>
+                <div class="price-period price-annual">
+                  <div class="dual-old-price">R$13.188 cobrando mês a mês</div>
+                  <div class="dual-preco-row">
+                    <span class="dual-cifrao">R$</span>
+                    <span class="dual-valor">9.891</span>
+                    <span class="dual-per-suffix" style="color:var(--muted);">/ano</span>
+                  </div>
+                  <div class="dual-periodo">pagamento único anual · sem fidelidade</div>
+                  <div class="dual-equiv">equivale a R$824,25/mês</div>
+                  <div class="dual-badge dual-badge-save">💰 Economize 25% + 1 mês grátis</div>
+                  <div class="dual-tokens-info">Tokens fornecidos por nós. <strong>Sem precisar de chave de API</strong>, sem custo extra de tokens — use a IA do jeito mais simples.</div>
+                </div>
               </div>
             </div>
           </div>
@@ -1419,7 +1523,7 @@
         <div class="cta-btns">
           <a href="#planos" class="btn btn-primary btn-lg">🚀 Quero o Zion Flow agora</a>
         </div>
-        <p class="garantia">✅ 7 dias de garantia &nbsp;·&nbsp; Sem fidelidade &nbsp;·&nbsp; Setup em minutos &nbsp;·&nbsp; Suporte incluso</p>
+        <p class="garantia">Sem fidelidade &nbsp;·&nbsp; Setup em minutos &nbsp;·&nbsp; Suporte incluso</p>
         <p style="margin-top:28px;font-size:13px;color:var(--muted);">Ainda tem dúvidas? <a href="https://wa.me/5511970943738?text=Quero+tirar+uma+duvida+sobre+o+Zion+Flow" target="_blank" style="color:var(--p2);text-decoration:none;font-weight:600;">Fale com a gente no WhatsApp →</a></p>
       </div>
     </div>
@@ -1439,6 +1543,18 @@
   </footer>
 
   <script>
+    // Mensal / Anual period switcher (per card)
+    function switchPeriod(btn, period) {
+      var dual = btn.closest('.plano-dual');
+      var btns = btn.parentElement.querySelectorAll('.period-btn');
+      btns.forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      if (dual) {
+        if (period === 'anual') { dual.classList.add('annual'); }
+        else { dual.classList.remove('annual'); }
+      }
+    }
+
     // Dual price tab switcher
     function switchTab(btn, showId, hideId) {
       // toggle tab buttons
